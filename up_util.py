@@ -22,6 +22,7 @@ crcTable = [0x0000, 0xC0C1, 0xC181, 0x0140, 0xC301, 0x03C0, 0x0280, 0xC241, 0xC6
 
 class UTIL:
 
+    @staticmethod
     def crc16(data, byInt=False):
         crc = [0xff, 0xff];
         for datum in data:
@@ -32,6 +33,7 @@ class UTIL:
             return crc[0] * 256 + crc[1];
         return crc
 
+    @staticmethod
     def hextodec(data, DATA):
         hexlist = []
         for i in range(len(data)):
@@ -46,6 +48,7 @@ class UTIL:
             else:
                 print(hexlist[i])
 
+    @staticmethod
     def hextodeclog(data, word):
         hexlist = []
         str = word + " : "
